@@ -37,6 +37,21 @@ A small native OBS Studio plugin that shows what is currently playing in Spotify
 
 The plugin is copied to `C:\ProgramData\obs-studio\plugins\spotify-overlay`. No other setup is needed.
 
+The installer also removes the "downloaded from the internet" mark from the copied files and tells you if Smart App Control is turned on.
+
+### Installation without running a script
+
+Windows can warn about `Install.bat` because it came from the internet. If you prefer not to run it, install manually:
+
+1. Unpack the ZIP.
+2. Open `C:\ProgramData\obs-studio\plugins` in File Explorer (paste the path into the address bar).
+3. Create a folder named `spotify-overlay`.
+4. Copy `spotify-overlay.dll` and the whole `data` folder into it.
+5. Right-click the copied DLL, open **Properties** and tick **Unblock** if that option is shown.
+6. Start OBS Studio.
+
+Creating folders in `ProgramData` needs administrator rights, so Windows may ask for confirmation.
+
 ## Using it
 
 - The source updates itself when the track, artist or cover changes.
@@ -65,6 +80,23 @@ Double-click the source to open its properties.
 | Progress bar color (hue) | 0–360°. 142 is Spotify green. |
 | Preview mode | Shows a sample track without Spotify running. |
 
+## Smart App Control (Windows 11)
+
+Smart App Control is a Windows 11 feature that blocks every DLL that is not signed by a certificate from a vendor in the Microsoft Trusted Root Program. This plugin is not code-signed, so on a PC with Smart App Control turned **On**, OBS cannot load it. Windows shows a message such as "Smart App Control blocked an app that may be unsafe".
+
+How to check: **Settings > Privacy & security > Windows Security > App & browser control > Smart App Control settings**.
+
+- **Off** – the plugin works.
+- **On** – the plugin is blocked. Smart App Control has no allow list and no per-app exception.
+- **Evaluation** – Smart App Control only observes what runs, so the plugin should work.
+
+If it is **On**, you have two options:
+
+1. Turn Smart App Control off. Windows 11 24H2 (build 26100.8116) and newer let you turn it back on later; on older builds it can only be re-enabled by resetting Windows.
+2. Use a build signed by a certificate authority in the Microsoft Trusted Root Program. There is no signed build yet.
+
+Unblocking the ZIP, adding an antivirus exclusion or turning off SmartScreen does not help. Only a trusted signature or turning Smart App Control off does.
+
 ## Troubleshooting
 
 | Problem | Fix |
@@ -73,6 +105,7 @@ Double-click the source to open its properties.
 | No cover image | Spotify sometimes does not share artwork. A music-note placeholder is shown instead. |
 | The plugin is not in the source list | Make sure you have 64-bit OBS Studio 33.x and that OBS was closed during installation. |
 | Antivirus warning | The DLL is not code-signed. The plugin only reads the local Windows media session and never connects to the internet. |
+| "Smart App Control blocked an app that may be unsafe" | See [Smart App Control](#smart-app-control-windows-11). The plugin is unsigned, so Smart App Control must be off or the build must be signed by a trusted CA. |
 | The old track stays for a moment | Windows exposes media state with a short delay, usually under a second. |
 
 ## Uninstall

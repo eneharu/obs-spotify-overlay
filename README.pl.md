@@ -37,6 +37,21 @@ Mała, natywna wtyczka do OBS Studio, która pokazuje, co aktualnie leci w Spoti
 
 Wtyczka trafia do `C:\ProgramData\obs-studio\plugins\spotify-overlay`. Nic więcej nie trzeba konfigurować.
 
+Instalator usuwa też oznaczenie „pobrano z internetu” ze skopiowanych plików i informuje, czy Inteligentna Kontrola aplikacji jest włączona.
+
+### Instalacja bez uruchamiania skryptu
+
+Windows może ostrzegać przed `Install.bat`, bo plik pochodzi z internetu. Jeśli wolisz go nie uruchamiać, zainstaluj wtyczkę ręcznie:
+
+1. Rozpakuj archiwum.
+2. Otwórz w Eksploratorze `C:\ProgramData\obs-studio\plugins` (wklej tę ścieżkę w pasek adresu).
+3. Utwórz folder `spotify-overlay`.
+4. Skopiuj do niego `spotify-overlay.dll` oraz cały folder `data`.
+5. Kliknij prawym przyciskiem na skopiowany DLL, otwórz **Właściwości** i zaznacz **Odblokuj**, jeśli ta opcja jest widoczna.
+6. Uruchom OBS Studio.
+
+Tworzenie folderów w `ProgramData` wymaga uprawnień administratora, więc Windows może poprosić o potwierdzenie.
+
 ## Używanie
 
 - Źródło samo aktualizuje się, gdy zmieni się utwór, wykonawca lub okładka.
@@ -65,6 +80,23 @@ Kliknij dwukrotnie źródło, aby otworzyć ustawienia.
 | Kolor paska postępu (odcień) | 0–360°. 142 to zielony Spotify. |
 | Tryb podglądu | Pokazuje przykładowy utwór bez uruchomionego Spotify. |
 
+## Inteligentna Kontrola aplikacji (Smart App Control)
+
+Inteligentna Kontrola aplikacji to funkcja Windows 11, która blokuje każdy plik DLL bez podpisu certyfikatem wystawionym przez dostawcę z programu Microsoft Trusted Root. Ta wtyczka nie jest podpisana, więc na komputerze z włączoną Inteligentną Kontrolą aplikacji OBS nie może jej wczytać. Windows pokazuje komunikat „Inteligentna Kontrola aplikacji zablokowała aplikację, która może być niebezpieczna”.
+
+Jak sprawdzić: **Ustawienia > Prywatność i zabezpieczenia > Zabezpieczenia Windows > Kontrola aplikacji i przeglądarki > Ustawienia Inteligentnej Kontroli aplikacji**.
+
+- **Wyłączona** – wtyczka działa.
+- **Włączona** – wtyczka jest blokowana. Inteligentna Kontrola aplikacji nie ma listy dozwolonych aplikacji ani wyjątków dla pojedynczych plików.
+- **Ocena** – system tylko obserwuje, co się uruchamia, więc wtyczka powinna działać.
+
+Jeśli jest **włączona**, masz dwie opcje:
+
+1. Wyłącz Inteligentną Kontrolę aplikacji. Windows 11 24H2 (kompilacja 26100.8116) i nowsze pozwalają ją później włączyć ponownie; na starszych wersjach można ją przywrócić tylko przez reset Windows.
+2. Użyj wersji podpisanej certyfikatem zaufanego dostawcy. Na razie nie ma takiej wersji.
+
+Odblokowanie archiwum, dodanie wyjątku w antywirusie ani wyłączenie SmartScreen nie pomaga. Pomaga tylko zaufany podpis albo wyłączenie Inteligentnej Kontroli aplikacji.
+
 ## Jeśli coś nie działa
 
 | Problem | Rozwiązanie |
@@ -73,6 +105,7 @@ Kliknij dwukrotnie źródło, aby otworzyć ustawienia.
 | Brak okładki | Spotify czasem nie udostępnia grafiki. Wtedy pojawia się miejsce z nutką. |
 | Wtyczki nie ma na liście źródeł | Upewnij się, że masz 64-bitowy OBS Studio 33.x i że OBS był zamknięty podczas instalacji. |
 | Ostrzeżenie antywirusa | Plik nie jest podpisany cyfrowo. Wtyczka czyta tylko lokalną sesję multimedialną Windows i nie łączy się z internetem. |
+| „Inteligentna Kontrola aplikacji zablokowała aplikację, która może być niebezpieczna” | Zobacz [Inteligentna Kontrola aplikacji](#inteligentna-kontrola-aplikacji-smart-app-control). Wtyczka nie jest podpisana, więc trzeba wyłączyć Inteligentną Kontrolę aplikacji albo użyć wersji podpisanej przez zaufany urząd certyfikacji. |
 | Stary utwór zostaje na chwilę | Windows udostępnia stan multimediów z krótkim opóźnieniem, zwykle poniżej sekundy. |
 
 ## Odinstalowanie
