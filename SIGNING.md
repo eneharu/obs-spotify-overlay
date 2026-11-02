@@ -15,12 +15,15 @@ Affordable options for an open-source project:
 
 | Option | Cost | Notes |
 | --- | --- | --- |
-| [SignPath Foundation](https://signpath.org/) | Free | Requires an OSI-approved license, a public repository and a CI build. Certificate is issued to SignPath Foundation. |
-| [Certum Open Source Code Signing](https://www.certum.eu/en/code-signing-certificates/open-source-code-signing/) | from €49/year | Cloud signing, no card reader. Certum is a Polish CA in the Trusted Root Program. |
-| Standard OV code signing (any CA) | from ~€150/year | Works the same for Smart App Control. |
+| [SignPath Foundation](https://signpath.org/) | Free | Requires an OSI-approved license, a public repository and a CI build. Certificate is issued to SignPath Foundation, so your name is not published. |
+| [Certum Open Source Code Signing](https://shop.certum.eu/open-source-code-signing-on-simplysign.html) | from €49/year | Cloud signing, no card reader. Certum is a Polish CA in the Trusted Root Program. The certificate subject contains your real first and last name (`Open Source Developer, Name Surname`). |
+| Standard OV code signing (any CA) | from ~€150/year | Works the same for Smart App Control. The certificate also contains your legal name or company. |
 
 An OV certificate is enough. EV certificates are not required by Smart App
 Control and no longer give an instant SmartScreen reputation boost.
+
+If you do not want your name embedded in every signed binary, use SignPath
+Foundation, whose certificate names the foundation as the publisher.
 
 ## Signing the DLL
 
