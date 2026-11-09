@@ -10,7 +10,9 @@ A small native OBS Studio plugin that shows what is currently playing in Spotify
 
 - Cover art, title, artist and progress bar read from the Spotify desktop app
 - Smooth marquee scrolling for titles that do not fit
-- Dark and light themes
+- Dark, light and color themes
+- Background transparency that keeps the text and cover opaque
+- Theme brightness slider that works with every theme
 - Separate title and artist font sizes with independent bold toggles
 - Optional panel background and optional "SPOTIFY" label
 - Option to crop the Spotify logo that is baked into some cover images
@@ -56,7 +58,7 @@ Creating folders in `ProgramData` needs administrator rights, so Windows may ask
 
 - The source updates itself when the track, artist or cover changes.
 - You can move and scale it like any other OBS source.
-- The default size is 760 × 220 px. Keep the aspect ratio if you resize it.
+- The default size is 760 × 220 px. With very large text the source grows taller so nothing overlaps; adjust its scale in OBS after changing the font size.
 - To hide the panel and show only the text and cover, turn off **Show background** and place the source over your own overlay.
 
 ## Settings
@@ -65,9 +67,12 @@ Double-click the source to open its properties.
 
 | Setting | Description |
 | --- | --- |
-| Theme | Dark or light panel. |
-| Title size | 18–44 px. Default: 30. |
-| Artist size | 12–30 px. Default: 20. |
+| Theme | Dark, Light or Color. Color adds a theme hue slider. |
+| Theme hue | 0-360°. Shown only with the Color theme. |
+| Theme brightness | -100% to 100%. Lightens or darkens the theme. Text switches between light and dark so it stays readable. |
+| Background transparency | 0-100%. 0 keeps the panel, 100 makes it fully transparent. Text and cover stay opaque. |
+| Title size | 18-96 px. Default: 30. |
+| Artist size | 12-64 px. Default: 20. |
 | Bold title | Semibold title font. On by default. |
 | Bold artist | Semibold artist font. Off by default. |
 | Title scroll speed | 0–120 px/s. Default: 35. At 0 the title does not scroll and ends with an ellipsis. |
@@ -79,6 +84,8 @@ Double-click the source to open its properties.
 | Progress bar width | 50–100%. Default: 100. The bar never extends past the right edge of the panel. |
 | Progress bar color (hue) | 0–360°. 142 is Spotify green. |
 | Preview mode | Shows a sample track without Spotify running. |
+
+With very large title or artist sizes the source grows taller automatically, so the text and the progress bar never overlap. After changing the size, adjust the source scale in OBS if needed.
 
 ## Smart App Control (Windows 11)
 

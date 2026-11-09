@@ -10,7 +10,9 @@ Mała, natywna wtyczka do OBS Studio, która pokazuje, co aktualnie leci w Spoti
 
 - okładka, tytuł, wykonawca i pasek postępu pobierane z aplikacji Spotify,
 - płynne przewijanie tytułów, które się nie mieszczą,
-- motyw ciemny i jasny,
+- motyw ciemny, jasny i kolorowy,
+- przezroczystość tła bez zmiany przezroczystości tekstu i okładki,
+- suwak jasności motywu działający z każdym motywem,
 - osobne rozmiary tytułu i wykonawcy oraz osobne pogrubienie,
 - opcjonalne tło panelu i opcjonalny napis „SPOTIFY”,
 - opcja przycięcia logo Spotify, które jest wtopione w niektóre okładki,
@@ -56,7 +58,7 @@ Tworzenie folderów w `ProgramData` wymaga uprawnień administratora, więc Wind
 
 - Źródło samo aktualizuje się, gdy zmieni się utwór, wykonawca lub okładka.
 - Możesz je przesuwać i skalować jak każde inne źródło w OBS.
-- Domyślny rozmiar to 760 × 220 px. Przy zmianie rozmiaru zachowaj proporcje.
+- Domyślny rozmiar to 760 × 220 px. Przy bardzo dużym tekście źródło automatycznie rośnie w dół, żeby nic się nie nakładało; po zmianie rozmiaru czcionki dopasuj skalę źródła w OBS.
 - Aby ukryć panel i pokazać tylko tekst i okładkę, wyłącz **Pokaż tło** i połóż źródło na własnym overlayu.
 
 ## Ustawienia
@@ -65,9 +67,12 @@ Kliknij dwukrotnie źródło, aby otworzyć ustawienia.
 
 | Ustawienie | Opis |
 | --- | --- |
-| Motyw | Ciemny lub jasny panel. |
-| Wielkość tytułu | 18–44 px. Domyślnie 30. |
-| Wielkość wykonawcy | 12–30 px. Domyślnie 20. |
+| Motyw | Ciemny, Jasny lub Kolor. Kolor dodaje suwak odcienia. |
+| Odcień motywu | 0–360°. Widoczny tylko przy motywie Kolor. |
+| Jasność motywu | -100% do 100%. Rozjaśnia lub przyciemnia motyw. Kolor tekstu zmienia się, żeby pozostał czytelny. |
+| Przezroczystość tła | 0–100%. 0 zostawia panel, 100 całkowicie go ukrywa. Tekst i okładka pozostają nieprzezroczyste. |
+| Wielkość tytułu | 18–96 px. Domyślnie 30. |
+| Wielkość wykonawcy | 12–64 px. Domyślnie 20. |
 | Pogrub tytuł | Pogrubiona czcionka tytułu. Domyślnie włączone. |
 | Pogrub wykonawcę | Pogrubiona czcionka wykonawcy. Domyślnie wyłączone. |
 | Prędkość przewijania tytułu | 0–120 px/s. Domyślnie 35. Przy 0 tytuł się nie przewija i kończy się wielokropkiem. |
@@ -79,6 +84,8 @@ Kliknij dwukrotnie źródło, aby otworzyć ustawienia.
 | Szerokość paska postępu | 50–100%. Domyślnie 100. Pasek nigdy nie wychodzi poza prawą krawędź panelu. |
 | Kolor paska postępu (odcień) | 0–360°. 142 to zielony Spotify. |
 | Tryb podglądu | Pokazuje przykładowy utwór bez uruchomionego Spotify. |
+
+Przy bardzo dużych rozmiarach tytułu lub wykonawcy źródło automatycznie rośnie w dół, więc tekst i pasek postępu nigdy się nie nakładają. Po zmianie rozmiaru dopasuj skalę źródła w OBS.
 
 ## Inteligentna Kontrola aplikacji (Smart App Control)
 
