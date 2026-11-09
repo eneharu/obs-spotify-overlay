@@ -69,7 +69,7 @@ Kliknij dwukrotnie źródło, aby otworzyć ustawienia.
 | --- | --- |
 | Motyw | Ciemny, Jasny lub Kolor. Kolor dodaje suwak odcienia. |
 | Odcień motywu | 0–360°. Widoczny tylko przy motywie Kolor. |
-| Jasność motywu | -100% do 100%. Rozjaśnia lub przyciemnia motyw. Kolor tekstu zmienia się, żeby pozostał czytelny. |
+| Jasność motywu | -100% do 40%. Rozjaśnia lub przyciemnia motyw. Kolor tekstu zmienia się, żeby pozostał czytelny. |
 | Przezroczystość tła | 0–100%. 0 zostawia panel, 100 całkowicie go ukrywa. Tekst i okładka pozostają nieprzezroczyste. |
 | Wielkość tytułu | 18–96 px. Domyślnie 30. |
 | Wielkość wykonawcy | 12–64 px. Domyślnie 20. |
