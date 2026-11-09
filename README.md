@@ -69,7 +69,7 @@ Double-click the source to open its properties.
 | --- | --- |
 | Theme | Dark, Light or Color. Color adds a theme hue slider. |
 | Theme hue | 0-360°. Shown only with the Color theme. |
-| Theme brightness | -100% to 40%. Lightens or darkens the theme. Text switches between light and dark so it stays readable. |
+| Theme brightness | -40% to 40%. Lightens or darkens the theme. Text switches between light and dark so it stays readable. |
 | Background transparency | 0-100%. 0 keeps the panel, 100 makes it fully transparent. Text and cover stay opaque. |
 | Title size | 18-96 px. Default: 30. |
 | Artist size | 12-64 px. Default: 20. |
