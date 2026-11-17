@@ -67,14 +67,23 @@ Double-click the source to open its properties.
 
 | Setting | Description |
 | --- | --- |
-| Theme | Dark, Light or Color. Color adds a theme hue slider. |
-| Theme hue | 0-360°. Shown only with the Color theme. |
-| Theme brightness | -40% to 40%. Lightens or darkens the theme. Text switches between light and dark so it stays readable. |
+| Theme | Dark, Light or Color. Color adds a panel color picker. |
+| Panel color | Color picker for the panel. Shown only with the Color theme. |
+| Theme brightness | -300% to 300%. Lightens or darkens the theme. Text switches between light and dark so it stays readable. |
 | Background transparency | 0-100%. 0 keeps the panel, 100 makes it fully transparent. Text and cover stay opaque. |
+| Transparency compensation | Keeps the panel color vivid at lower opacity, so a 40% transparent bright color still looks bright on a dark scene. Works best on dark backgrounds. |
 | Title size | 18-96 px. Default: 30. |
 | Artist size | 12-64 px. Default: 20. |
 | Bold title | Semibold title font. On by default. |
 | Bold artist | Semibold artist font. Off by default. |
+| Automatic title color | Switches the title between light and dark to stay readable. Turn it off to use the manual color. |
+| Title color | Color picker, used when Automatic title color is off. |
+| Automatic artist color | Switches the artist between light and dark to stay readable. Turn it off to use the manual color. |
+| Artist color | Color picker, used when Automatic artist color is off. |
+| Title outline | Draws an outline around the title font. Shows thickness and color controls when enabled. |
+| Artist outline | Draws an outline around the artist font. Shows thickness and color controls when enabled. |
+| Panel outline | Draws an outline around the panel. Shows thickness and color controls when enabled. |
+| Cover outline | Draws an outline around the album cover. Shows thickness and color controls when enabled. |
 | Title scroll speed | 0–120 px/s. Default: 35. At 0 the title does not scroll and ends with an ellipsis. |
 | Show background | Panel background behind the text. |
 | Show SPOTIFY text | The small "SPOTIFY" label and its dot. |
@@ -82,7 +91,7 @@ Double-click the source to open its properties.
 | Show progress bar | Turns the progress bar on or off. |
 | Progress bar thickness | 2–12 px. Default: 3. |
 | Progress bar width | 50–100%. Default: 100. The bar never extends past the right edge of the panel. |
-| Progress bar color (hue) | 0–360°. 142 is Spotify green. |
+| Progress bar color | Color picker. |
 | Preview mode | Shows a sample track without Spotify running. |
 
 With very large title or artist sizes the source grows taller automatically, so the text and the progress bar never overlap. After changing the size, adjust the source scale in OBS if needed.

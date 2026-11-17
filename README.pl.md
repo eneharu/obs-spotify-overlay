@@ -67,14 +67,23 @@ Kliknij dwukrotnie źródło, aby otworzyć ustawienia.
 
 | Ustawienie | Opis |
 | --- | --- |
-| Motyw | Ciemny, Jasny lub Kolor. Kolor dodaje suwak odcienia. |
-| Odcień motywu | 0–360°. Widoczny tylko przy motywie Kolor. |
-| Jasność motywu | -40% do 40%. Rozjaśnia lub przyciemnia motyw. Kolor tekstu zmienia się, żeby pozostał czytelny. |
+| Motyw | Ciemny, Jasny lub Kolor. Kolor dodaje próbnik koloru panelu. |
+| Kolor panelu | Próbnik koloru panelu. Widoczny tylko przy motywie Kolor. |
+| Jasność motywu | -300% do 300%. Rozjaśnia lub przyciemnia motyw. Kolor tekstu zmienia się, żeby pozostał czytelny. |
 | Przezroczystość tła | 0–100%. 0 zostawia panel, 100 całkowicie go ukrywa. Tekst i okładka pozostają nieprzezroczyste. |
+| Kompensacja przezroczystości | Utrzymuje jaskrawość koloru panelu przy mniejszym kryciu, dzięki czemu jasny kolor przy 40% przezroczystości nadal wygląda jasno na ciemnej scenie. Najlepiej działa na ciemnym tle. |
 | Wielkość tytułu | 18–96 px. Domyślnie 30. |
 | Wielkość wykonawcy | 12–64 px. Domyślnie 20. |
 | Pogrub tytuł | Pogrubiona czcionka tytułu. Domyślnie włączone. |
 | Pogrub wykonawcę | Pogrubiona czcionka wykonawcy. Domyślnie wyłączone. |
+| Automatyczny kolor tytułu | Przełącza tytuł między jasnym i ciemnym, żeby pozostał czytelny. Wyłącz, aby użyć ręcznego koloru. |
+| Kolor tytułu | Próbnik koloru. Używany, gdy automatyczny kolor tytułu jest wyłączony. |
+| Automatyczny kolor wykonawcy | Przełącza wykonawcę między jasnym i ciemnym, żeby pozostał czytelny. Wyłącz, aby użyć ręcznego koloru. |
+| Kolor wykonawcy | Próbnik koloru. Używany, gdy automatyczny kolor wykonawcy jest wyłączony. |
+| Obrys tytułu | Rysuje obrys wokół czcionki tytułu. Po włączeniu pokazuje suwaki grubości i koloru. |
+| Obrys wykonawcy | Rysuje obrys wokół czcionki wykonawcy. Po włączeniu pokazuje suwaki grubości i koloru. |
+| Obrys panelu | Rysuje obrys wokół panelu. Po włączeniu pokazuje suwaki grubości i koloru. |
+| Obrys okładki | Rysuje obrys wokół okładki. Po włączeniu pokazuje suwaki grubości i koloru. |
 | Prędkość przewijania tytułu | 0–120 px/s. Domyślnie 35. Przy 0 tytuł się nie przewija i kończy się wielokropkiem. |
 | Pokaż tło | Tło panelu za tekstem. |
 | Pokaż napis SPOTIFY | Mały napis „SPOTIFY” i zielona kropka. |
@@ -82,7 +91,7 @@ Kliknij dwukrotnie źródło, aby otworzyć ustawienia.
 | Pokaż pasek postępu | Włącza lub wyłącza pasek. |
 | Grubość paska postępu | 2–12 px. Domyślnie 3. |
 | Szerokość paska postępu | 50–100%. Domyślnie 100. Pasek nigdy nie wychodzi poza prawą krawędź panelu. |
-| Kolor paska postępu (odcień) | 0–360°. 142 to zielony Spotify. |
+| Kolor paska postępu | Próbnik koloru. |
 | Tryb podglądu | Pokazuje przykładowy utwór bez uruchomionego Spotify. |
 
 Przy bardzo dużych rozmiarach tytułu lub wykonawcy źródło automatycznie rośnie w dół, więc tekst i pasek postępu nigdy się nie nakładają. Po zmianie rozmiaru dopasuj skalę źródła w OBS.
